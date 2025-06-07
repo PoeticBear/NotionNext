@@ -52,7 +52,7 @@ function BannerGroup(props) {
       {/* 动图 */}
       <Banner {...props} />
       {/* 导航分类 */}
-      <GroupMenu />
+      {/* <GroupMenu /> */}
     </div>
   )
 }
@@ -68,9 +68,9 @@ function Banner(props) {
    * 随机跳转文章
    */
   function handleClickBanner() {
-    const randomIndex = Math.floor(Math.random() * allNavPages.length)
-    const randomPost = allNavPages[randomIndex]
-    router.push(`${siteConfig('SUB_PATH', '')}/${randomPost?.slug}`)
+    // const randomIndex = Math.floor(Math.random() * allNavPages.length)
+    // const randomPost = allNavPages[randomIndex]
+    // router.push(`${siteConfig('SUB_PATH', '')}/${randomPost?.slug}`)
   }
 
   // 遮罩文字
@@ -83,7 +83,7 @@ function Banner(props) {
       className='hidden xl:flex xl:flex-col group h-full bg-white dark:bg-[#1e1e1e] rounded-xl border dark:border-gray-700 mb-3 relative overflow-hidden'>
       <div
         id='banner-title'
-        className='z-10 flex flex-col absolute top-10 left-10'>
+        className='z-10 flex flex-col absolute top-2 left-10'>
         <div className='text-4xl font-bold mb-3  dark:text-white'>
           {siteConfig('HEO_HERO_TITLE_1', null, CONFIG)}
           <br />
@@ -98,7 +98,7 @@ function Banner(props) {
       <TagsGroupBar />
 
       {/* 遮罩 */}
-      <div
+      {/* <div
         id='banner-cover'
         style={{ backdropFilter: 'blur(15px)' }}
         className={
@@ -110,7 +110,7 @@ function Banner(props) {
             <ArrowSmallRight className={'w-24 h-24 stroke-2'} />
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
@@ -121,12 +121,12 @@ function Banner(props) {
  */
 function TagsGroupBar() {
   let groupIcons = siteConfig('HEO_GROUP_ICONS', null, CONFIG)
-  if (groupIcons) {
-    groupIcons = groupIcons.concat(groupIcons)
-  }
+  // if (groupIcons) {
+  //   groupIcons = groupIcons.concat(groupIcons)
+  // }
   return (
-    <div className='tags-group-all flex -rotate-[30deg] h-full'>
-      <div className='tags-group-wrapper flex flex-nowrap absolute top-16'>
+    <div className='tags-group-all flex h-full'>
+      <div className='tags-group-wrapper flex flex-nowrap absolute top-24'>
         {groupIcons?.map((g, index) => {
           return (
             <div key={index} className='tags-group-icon-pair ml-6 select-none'>
@@ -139,10 +139,10 @@ function TagsGroupBar() {
                   priority={true}
                   src={g.img_1}
                   title={g.title_1}
-                  className='w-2/3 hidden xl:block'
+                  className='w-3/3 hidden xl:block rounded-3xl'
                 />
               </div>
-              <div
+              {/* <div
                 style={{ background: g.color_2 }}
                 className={
                   'tags-group-icon  mt-5 w-28 h-28 rounded-3xl flex items-center justify-center text-white text-lg font-bold shadow-md'
@@ -151,9 +151,9 @@ function TagsGroupBar() {
                   priority={true}
                   src={g.img_2}
                   title={g.title_2}
-                  className='w-2/3 hidden xl:block'
+                  className='w-3/3 hidden xl:block rounded-3xl'
                 />
-              </div>
+              </div> */}
             </div>
           )
         })}
@@ -250,7 +250,6 @@ function TopGroup(props) {
                 <div className='group-hover:text-indigo-600 dark:group-hover:text-yellow-600 line-clamp-2 overflow-hidden m-2 font-semibold'>
                   {p?.title}
                 </div>
-                {/* hover 悬浮的 ‘荐’ 字 */}
                 <div className='opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 duration-200 transition-all absolute -top-2 -left-2 bg-indigo-600 dark:bg-yellow-600  text-white rounded-xl overflow-hidden pr-2 pb-2 pl-4 pt-4 text-xs'>
                   {locale.COMMON.RECOMMEND_BADGES}
                 </div>
@@ -277,7 +276,7 @@ function getTopPosts({ latestPosts, allNavPages }) {
     return latestPosts
   }
 
-  // 显示包含‘推荐’标签的文章
+  // 显示包含'推荐'标签的文章
   let sortPosts = []
 
   // 排序方式
@@ -395,13 +394,13 @@ function TodayCard({ cRef, siteInfo }) {
 
         {/* 封面图 */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        {/* <img
           src={siteInfo?.pageCover}
           id='today-card-cover'
           className={`${
             isCoverUp ? '' : ' pointer-events-none'
           } hover:scale-110 duration-1000 object-cover cursor-pointer today-card-cover absolute w-full h-full top-0`}
-        />
+        /> */}
       </div>
     </div>
   )

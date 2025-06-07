@@ -65,7 +65,7 @@ const LayoutBase = props => {
       {/* 通知横幅 */}
       {router.route === '/' ? (
         <>
-          <NoticeBar />
+          {/* <NoticeBar /> */}
           <Hero {...props} />
         </>
       ) : null}
