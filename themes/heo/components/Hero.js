@@ -24,16 +24,11 @@ const Hero = props => {
       <div
         id='hero'
         style={{ zIndex: 1 }}
-        className={`${HEO_HERO_REVERSE ? 'xl:flex-row-reverse' : ''}
-           recent-post-top rounded-[12px] 2xl:px-5 recent-top-post-group max-w-[86rem] overflow-x-scroll w-full mx-auto flex-row flex-nowrap flex relative`}>
-        {/* 左侧banner组 */}
-        <BannerGroup {...props} />
-
-        {/* 中间留白 */}
-        <div className='px-1.5 h-full'></div>
-
-        {/* 右侧置顶文章组 */}
-        <TopGroup {...props} />
+        className={`recent-post-top rounded-[12px] 2xl:px-5 recent-top-post-group max-w-[86rem] overflow-x-scroll w-full mx-auto flex-row flex-nowrap flex relative`}>
+        {/* 只保留BannerGroup，移除flex-1限制，让它占满整个宽度 */}
+        <div className='w-full'>
+          <BannerGroup {...props} />
+        </div>
       </div>
     </div>
   )
@@ -45,10 +40,10 @@ const Hero = props => {
  */
 function BannerGroup(props) {
   return (
-    // 左侧英雄区
+    // 移除 flex-1 和 max-w-[42rem] 限制，让它占满父容器宽度
     <div
       id='bannerGroup'
-      className='flex flex-col justify-between flex-1 mr-2 max-w-[42rem]'>
+      className='flex flex-col justify-between w-full'>
       {/* 动图 */}
       <Banner {...props} />
       {/* 导航分类 */}
@@ -73,17 +68,24 @@ function Banner(props) {
     // router.push(`${siteConfig('SUB_PATH', '')}/${randomPost?.slug}`)
   }
 
+
+  // 跳转应用中心
+  function handleNavToAppCenter() {
+    router.push('/app-center')
+  }
+
   // 遮罩文字
   const coverTitle = siteConfig('HEO_HERO_COVER_TITLE')
 
   return (
     <div
       id='banners'
-      onClick={handleClickBanner}
-      className='hidden xl:flex xl:flex-col group h-full bg-white dark:bg-[#1e1e1e] rounded-xl border dark:border-gray-700 mb-3 relative overflow-hidden'>
-      <div
+      onClick={handleNavToAppCenter}
+      // 移除 hidden xl:flex 限制，改为在所有屏幕尺寸下都显示
+      className='flex flex-col group h-full dark:bg-[#1e1e1e] rounded-xl border dark:border-gray-700 relative overflow-hidden min-h-[342px]'>
+      {/* <div
         id='banner-title'
-        className='z-10 flex flex-col absolute top-2 left-10'>
+        className='z-10 flex flex-col absolute left-10'>
         <div className='text-4xl font-bold mb-3  dark:text-white'>
           {siteConfig('HEO_HERO_TITLE_1', null, CONFIG)}
           <br />
@@ -92,13 +94,13 @@ function Banner(props) {
         <div className='text-xs text-gray-600  dark:text-gray-200'>
           {siteConfig('HEO_HERO_TITLE_3', null, CONFIG)}
         </div>
-      </div>
+      </div> */}
 
       {/* 斜向滚动的图标 */}
       <TagsGroupBar />
 
       {/* 遮罩 */}
-      {/* <div
+      <div
         id='banner-cover'
         style={{ backdropFilter: 'blur(15px)' }}
         className={
@@ -110,7 +112,7 @@ function Banner(props) {
             <ArrowSmallRight className={'w-24 h-24 stroke-2'} />
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   )
 }
@@ -121,13 +123,14 @@ function Banner(props) {
  */
 function TagsGroupBar() {
   let groupIcons = siteConfig('HEO_GROUP_ICONS', null, CONFIG)
-  // if (groupIcons) {
-  //   groupIcons = groupIcons.concat(groupIcons)
-  // }
+  if (groupIcons) {
+    groupIcons = groupIcons.concat(groupIcons)
+  }
   return (
     <div className='tags-group-all flex h-full'>
-      <div className='tags-group-wrapper flex flex-nowrap absolute top-24'>
-        {groupIcons?.map((g, index) => {
+      <div className='tags-group-wrapper flex flex-nowrap absolute top-12'>
+        {groupIcons?.map((g, index) => {2
+
           return (
             <div key={index} className='tags-group-icon-pair ml-6 select-none'>
               <div
@@ -142,7 +145,7 @@ function TagsGroupBar() {
                   className='w-3/3 hidden xl:block rounded-3xl'
                 />
               </div>
-              {/* <div
+              <div
                 style={{ background: g.color_2 }}
                 className={
                   'tags-group-icon  mt-5 w-28 h-28 rounded-3xl flex items-center justify-center text-white text-lg font-bold shadow-md'
@@ -153,7 +156,7 @@ function TagsGroupBar() {
                   title={g.title_2}
                   className='w-3/3 hidden xl:block rounded-3xl'
                 />
-              </div> */}
+              </div>
             </div>
           )
         })}
@@ -347,7 +350,7 @@ function TodayCard({ cRef, siteInfo }) {
    * @param {*} e
    */
   function handleCardClick(e) {
-    router.push(link)
+    // router.push(link)
   }
 
   return (
@@ -394,13 +397,13 @@ function TodayCard({ cRef, siteInfo }) {
 
         {/* 封面图 */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        {/* <img
+        <img
           src={siteInfo?.pageCover}
           id='today-card-cover'
           className={`${
             isCoverUp ? '' : ' pointer-events-none'
           } hover:scale-110 duration-1000 object-cover cursor-pointer today-card-cover absolute w-full h-full top-0`}
-        /> */}
+        />
       </div>
     </div>
   )

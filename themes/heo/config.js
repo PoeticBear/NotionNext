@@ -19,13 +19,13 @@ const CONFIG = {
 
   // 英雄区(首页顶部大卡)
   HEO_HERO_TITLE_1: '',
-  HEO_HERO_TITLE_2: '有AI有方法',
+  HEO_HERO_TITLE_2: '应用大全',
   HEO_HERO_TITLE_3: '',
   HEO_HERO_TITLE_4: '',
-  HEO_HERO_TITLE_5: '了解最新资讯',
+  HEO_HERO_TITLE_5: '最新资讯',
   HEO_HERO_TITLE_LINK: 'https://yuaiyoufang.com',
   // 英雄区遮罩文字
-  HEO_HERO_COVER_TITLE: '随便逛逛',
+  HEO_HERO_COVER_TITLE: '应用大全',
 
   // 英雄区显示三个置顶分类
   HEO_HERO_CATEGORY_1: { title: '教学工具', url: '/tag/教学工具' },
@@ -59,20 +59,151 @@ const CONFIG = {
   // 用户技能图标
   HEO_GROUP_ICONS: [
     {
-      title_1: 'AfterEffect',
+      title_1: '求解平均数',
       img_1: '/images/heo/app-01-icon.jpeg',
       color_1: '#989bf8',
-      title_2: 'Sketch',
+      title_2: '平均数',
+      img_2: '/images/heo/app-05-icon.jpeg',
+      color_2: '#ffffff'
+    },
+    {
+      title_1: '三角形内角和',
+      img_1: '/images/heo/app-02-icon.png',
+      color_1: '#989bf8',
+      title_2: '三角形内角和',
+      img_2: '/images/heo/app-08-icon.jpeg',
+      color_2: '#ffffff'
+    },
+    {
+      title_1: '3',
+      img_1: '/images/heo/app-03-icon.jpeg',
+      color_1: '#989bf8',
+      title_2: '3',
+      img_2: '/images/heo/app-06-icon.jpeg',
+      color_2: '#ffffff'
+    },
+    {
+      title_1: '4',
+      img_1: '/images/heo/app-04-icon.jpeg',
+      color_1: '#989bf8',
+      title_2: '4',
       img_2: '/images/heo/app-01-icon.jpeg',
+      color_2: '#ffffff'
+    },
+    {
+      title_1: '5',
+      img_1: '/images/heo/app-05-icon.jpeg',
+      color_1: '#989bf8',
+      title_2: '5',
+      img_2: '/images/heo/app-03-icon.jpeg',
+      color_2: '#ffffff'
+    },
+    {
+      title_1: '6',
+      img_1: '/images/heo/app-06-icon.jpeg',
+      color_1: '#989bf8',
+      title_2: '6',
+      img_2: '/images/heo/app-09-icon.jpeg',
+      color_2: '#ffffff'
+    },
+    {
+      title_1: '7',
+      img_1: '/images/heo/app-07-icon.jpeg',
+      color_1: '#989bf8',
+      title_2: '7',
+      img_2: '/images/heo/app-06-icon.jpeg',
+      color_2: '#ffffff'
+    },
+    {
+      title_1: '8',
+      img_1: '/images/heo/app-08-icon.jpeg',
+      color_1: '#989bf8',
+      title_2: '7',
+      img_2: '/images/heo/app-10-icon.jpeg',
+      color_2: '#ffffff'
+    },
+    {
+      title_1: '8',
+      img_1: '/images/heo/app-11-icon.jpeg',
+      color_1: '#989bf8',
+      title_2: '7',
+      img_2: '/images/heo/app-04-icon.jpeg',
+      color_2: '#ffffff'
+    },
+    {
+      title_1: '8',
+      img_1: '/images/heo/app-12-icon.jpeg',
+      color_1: '#989bf8',
+      title_2: '7',
+      img_2: '/images/heo/app-09-icon.jpeg',
       color_2: '#ffffff'
     },
   ],
 
+  
+
+  ALL_APPS: [
+    {
+      "title_1": "求解平均数",
+      "img_1": "/images/heo/app-01-icon.jpeg",
+      "subject": "Mathematics",
+      "function_introduction": "通过输入数据集合，计算并展示算术平均数，帮助理解数据集中趋势的统计概念"
+    },
+    {
+      "title_1": "三角形内角和",
+      "img_1": "/images/heo/app-02-icon.png",
+      "subject": "Mathematics",
+      "function_introduction": "通过动画演示或互动操作，验证三角形内角和为180°的几何定理，直观理解角度关系"
+    },
+    {
+      "title_1": "认识几分几秒",
+      "img_1": "/images/heo/app-03-icon.jpeg",
+      "subject": "Mathematics",
+      "function_introduction": "以钟表模型和时间换算练习，帮助认识时分秒的进制关系，掌握时间的读取与单位转换"
+    },
+    {
+      "title_1": "分数的初步认识",
+      "img_1": "/images/heo/app-04-icon.jpeg",
+      "subject": "Mathematics",
+      "function_introduction": "通过图形分割和分数表示互动，引导理解分数的基本概念、读写方法及简单大小比较"
+    },
+    {
+      "title_1": "理解周长的概念",
+      "img_1": "/images/heo/app-05-icon.jpeg",
+      "subject": "Mathematics",
+      "function_introduction": "结合平面图形的边线测量与计算，直观阐释周长定义，掌握不同图形周长的计算方法"
+    },
+    {
+      "title_1": "理解质量单位",
+      "img_1": "/images/heo/app-06-icon.jpeg",
+      "subject": "Mathematics/Science",
+      "function_introduction": "通过实物重量对比和单位换算练习，认识克、千克等质量单位，建立实际重量感知"
+    },
+    {
+      "title_1": "字词积累",
+      "img_1": "/images/heo/app-07-icon.jpeg",
+      "subject": "Chinese",
+      "function_introduction": "提供字词拼写、释义、近义词反义词等内容，通过闯关游戏或词库练习提升词汇量"
+    },
+    {
+      "title_1": "古诗与文言文",
+      "img_1": "/images/heo/app-08-icon.jpeg",
+      "subject": "Chinese",
+      "function_introduction": "收录经典古诗文篇目，提供注释、赏析、朗诵及默写功能，辅助理解传统文化文本"
+    },
+    {
+      "title_1": "看图写话",
+      "img_1": "/images/heo/app-11-icon.jpeg",
+      "subject": "Chinese",
+      "function_introduction": "通过提供图片素材和写作引导，培养观察能力与语言组织能力，练习短篇叙事写作"
+    }
+  ],
+
   HEO_SOCIAL_CARD: true, // 是否显示右侧，点击加入社群按钮
-  HEO_SOCIAL_CARD_TITLE_1: '微信群',
-  HEO_SOCIAL_CARD_TITLE_2: '加入育AI有方微信群',
+  HEO_SOCIAL_CARD_TITLE_1: '微信',
+  HEO_SOCIAL_CARD_TITLE_2: 'ID：yuaiyoufang',
   HEO_SOCIAL_CARD_TITLE_3: '点击加入社群',
-  HEO_SOCIAL_CARD_URL: 'https://docs.yuaiyoufang.com/article/how-to-question',
+  HEO_SOCIAL_CARD_URL: '',
 
   // 底部统计面板文案
   HEO_POST_COUNT_TITLE: '文章数:',

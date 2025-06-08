@@ -9,7 +9,7 @@ export default function FlipCard(props) {
   const [isFlipped, setIsFlipped] = useState(false)
 
   function handleCardFlip() {
-    setIsFlipped(!isFlipped)
+    // setIsFlipped(!isFlipped)
   }
 
   return (

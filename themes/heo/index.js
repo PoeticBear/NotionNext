@@ -498,8 +498,87 @@ const LayoutTagIndex = props => {
   )
 }
 
+/**
+ * 应用中心
+ * @param {*} props
+ * @returns
+ */
+const LayoutAppCenter = props => {
+  const { apps } = props
+  const { locale } = useGlobal()
+
+  return (
+    <div id='app-center-outer-wrapper' className='mt-8 px-5 md:px-0'>
+      <div className='text-4xl font-extrabold dark:text-gray-200 mb-5'>
+        应用中心
+      </div>
+      <div className='text-gray-600 dark:text-gray-400 mb-8'>
+        探索我们精心准备的教学应用，提升您的学习体验
+      </div>
+      
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+        {apps?.map((app, index) => {
+          return (
+            <div 
+              key={index}
+              className='group cursor-pointer bg-white dark:bg-[#1e1e1e] rounded-xl border dark:border-gray-600 p-6 hover:shadow-lg transition-all duration-300 hover:scale-105'
+              onClick={() => {
+                // 这里可以添加应用启动逻辑
+                console.log('启动应用:', app.title_1)
+              }}
+            >
+              {/* 应用图标和学科标签 */}
+              <div className='mb-4 flex items-center justify-between'>
+                <LazyImage
+                  src={app.img_1}
+                  alt={app.title_1}
+                  className='w-16 h-16 rounded-lg object-cover'
+                />
+                {/* 学科标签 */}
+                <span className='px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium rounded-full'>
+                  {app.subject}
+                </span>
+              </div>
+              
+              {/* 应用标题 */}
+              <h3 className='text-xl font-bold dark:text-gray-200 mb-3 group-hover:text-indigo-600 transition-colors'>
+                {app.title_1}
+              </h3>
+              
+              {/* 功能介绍 */}
+              <p className='text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-3 leading-relaxed'>
+                {app.function_introduction}
+              </p>
+              
+              {/* 启动按钮 */}
+              <div className='flex justify-center mt-auto'>
+                <button className='w-full px-4 py-2 bg-indigo-600 text-white text-sm rounded-lg hover:bg-indigo-700 transition-colors font-medium'>
+                  启动应用
+                </button>
+              </div>
+            </div>
+          )
+        })}
+      </div>
+      
+      {/* 空状态 */}
+      {(!apps || apps.length === 0) && (
+        <div className='text-center py-12'>
+          <div className='text-gray-400 dark:text-gray-500 text-lg mb-4'>
+            暂无应用
+          </div>
+          <p className='text-gray-500 dark:text-gray-400'>
+            应用正在开发中，敬请期待...
+          </p>
+        </div>
+      )}
+    </div>
+  )
+}
+
 export {
   Layout404,
+  LayoutAppCenter,
   LayoutArchive,
   LayoutBase,
   LayoutCategoryIndex,
