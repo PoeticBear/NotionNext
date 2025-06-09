@@ -512,7 +512,7 @@ const LayoutAppCenter = props => {
       <div className='text-4xl font-extrabold dark:text-gray-200 mb-5'>
         应用中心
       </div>
-      <div className='text-gray-600 dark:text-gray-400 mb-8'>
+      <div className='text-gray-600 dark:text-gray-400 mb-8 text-lg text-center mt-8'>
         探索我们精心准备的教学应用，提升您的学习体验
       </div>
       
@@ -535,9 +535,9 @@ const LayoutAppCenter = props => {
                   className='w-16 h-16 rounded-lg object-cover'
                 />
                 {/* 学科标签 */}
-                <span className='px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium rounded-full'>
+                {/* <span className='px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium rounded-full'>
                   {app.subject}
-                </span>
+                </span> */}
               </div>
               
               {/* 应用标题 */}
@@ -551,14 +551,18 @@ const LayoutAppCenter = props => {
               </p>
               
               {/* 启动按钮 */}
-              <div className='flex justify-center mt-auto'>
+              {/* <div className='flex justify-center mt-auto'>
                 <button className='w-full px-4 py-2 bg-indigo-600 text-white text-sm rounded-lg hover:bg-indigo-700 transition-colors font-medium'>
                   启动应用
                 </button>
-              </div>
+              </div> */}
             </div>
           )
         })}
+      </div>
+
+      <div className='text-gray-600 dark:text-gray-400 mb-8 text-lg text-center mt-8'>
+        更多应用正在开发中，敬请期待...
       </div>
       
       {/* 空状态 */}

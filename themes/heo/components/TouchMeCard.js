@@ -12,7 +12,7 @@ export default function TouchMeCard() {
     return <></>
   }
   return (
-    <div className={'relative h-28 text-white flex flex-col'}>
+    <div className={'relative h-[30rem] text-white flex flex-col'}>
       <FlipCard
         className='cursor-pointer lg:p-6 p-4 border rounded-xl bg-[#4f65f0] dark:bg-yellow-600 dark:border-gray-600'
         frontContent={
@@ -23,6 +23,11 @@ export default function TouchMeCard() {
             <h3 className='pt-2'>
               {siteConfig('HEO_SOCIAL_CARD_TITLE_2', null, CONFIG)}
             </h3>
+            <img
+              src={'/images/heo/wechat-qrcode.jpg'}
+              className='mt-4 w-full h-auto rounded-lg'
+              alt='Social Card Image'
+            />
             <div
               className='absolute left-0 top-0 w-full h-full'
               style={{
