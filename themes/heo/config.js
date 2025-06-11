@@ -1,5 +1,5 @@
 const CONFIG = {
-  AUTHOR:"一AI三思",
+  AUTHOR:"一AI三师",
   WECHAT_ID:"yiaisansi101",
   HEO_HOME_POST_TWO_COLS: true, // 首页博客两列显示，若为false则只显示一列
   HEO_LOADING_COVER: true, // 页面加载的遮罩动画
@@ -10,8 +10,8 @@ const CONFIG = {
 
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   HEO_NOTICE_BAR: [
-    { title: '欢迎来到一AI三思', url: 'https://blog.1ai3si.com' },
-    { title: '访问文档中心获取更多帮助', url: 'https://docs.1ai3si.com' }
+    { title: '欢迎来到一AI三师', url: 'https://blog.1a3s.com' },
+    { title: '访问文档中心获取更多帮助', url: 'https://docs.1a3s.com' }
   ],
 
   // 英雄区左右侧组件颠倒位置
@@ -25,7 +25,7 @@ const CONFIG = {
   HEO_HERO_TITLE_3: '',
   HEO_HERO_TITLE_4: '',
   HEO_HERO_TITLE_5: '最新资讯',
-  HEO_HERO_TITLE_LINK: 'https://1ai3si.com',
+  HEO_HERO_TITLE_LINK: 'https://1a3s.com',
   // 英雄区遮罩文字
   HEO_HERO_COVER_TITLE: '应用大全',
 
@@ -41,7 +41,7 @@ const CONFIG = {
 
   // 右侧个人资料卡牌欢迎语，点击可自动切换
   HEO_INFOCARD_GREETINGS: [
-    '你好！我是一AI三思',
+    '你好！我是一AI三师',
     '🔍 教育工具全栈开发者',
     '💡  提供智能教学工具',
     '📰 分享前沿教育科技资讯',
@@ -53,9 +53,9 @@ const CONFIG = {
   // 个人资料底部按钮
   HEO_INFO_CARD_URL1: '/about',
   HEO_INFO_CARD_ICON1: 'fas fa-user',
-  HEO_INFO_CARD_URL2: 'https://github.com/1ai3si',
+  HEO_INFO_CARD_URL2: 'https://github.com/1a3s',
   HEO_INFO_CARD_ICON2: 'fab fa-github',
-  HEO_INFO_CARD_URL3: 'https://www.1ai3si.com',
+  HEO_INFO_CARD_URL3: 'https://www.1a3s.com',
   HEO_INFO_CARD_TEXT3: '了解更多',
 
   // 用户技能图标

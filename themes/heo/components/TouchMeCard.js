@@ -28,12 +28,12 @@ export default function TouchMeCard() {
               className='mt-4 w-full h-auto rounded-lg'
               alt='Social Card Image'
             />
-            <div
+            {/* <div
               className='absolute left-0 top-0 w-full h-full'
               style={{
                 background:
                   'url(https://bu.dusays.com/2023/05/16/64633c4cd36a9.png) center center no-repeat'
-              }}></div>
+              }}></div> */}
           </div>
         }
         backContent={
