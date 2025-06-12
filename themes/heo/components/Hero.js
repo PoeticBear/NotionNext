@@ -100,7 +100,7 @@ function Banner(props) {
       <TagsGroupBar />
 
       {/* 遮罩 */}
-      <div
+      {/* <div
         id='banner-cover'
         style={{ backdropFilter: 'blur(15px)' }}
         className={
@@ -112,7 +112,7 @@ function Banner(props) {
             <ArrowSmallRight className={'w-24 h-24 stroke-2'} />
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
