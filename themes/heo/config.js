@@ -1,6 +1,6 @@
 const CONFIG = {
   AUTHOR:"一AI三师",
-  WECHAT_ID:"yiaisansi101",
+  WECHAT_ID:"yiaisanshi100",
   HEO_HOME_POST_TWO_COLS: true, // 首页博客两列显示，若为false则只显示一列
   HEO_LOADING_COVER: true, // 页面加载的遮罩动画
 
@@ -203,7 +203,7 @@ const CONFIG = {
 
   HEO_SOCIAL_CARD: true, // 是否显示右侧，点击加入社群按钮
   HEO_SOCIAL_CARD_TITLE_1: '联系我',
-  HEO_SOCIAL_CARD_TITLE_2: '微信ID：yiaisansi101',
+  HEO_SOCIAL_CARD_TITLE_2: '微信ID：yiaisanshi100',
   HEO_SOCIAL_CARD_TITLE_3: '点击加好友',
   HEO_SOCIAL_CARD_URL: '',
 
