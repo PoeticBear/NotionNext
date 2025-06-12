@@ -71,7 +71,7 @@ function Banner(props) {
 
   // 跳转应用中心
   function handleNavToAppCenter() {
-    router.push('/app-center')
+    // router.push('/app-center')
   }
 
   // 遮罩文字
